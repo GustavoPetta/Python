@@ -1,0 +1,48 @@
+<form ng-submit="dados(dado)">
+    <div class="form-group col-md-5">
+        <label>CEP:</label>
+        <input class="cep form-control" type="text" ng-model="dado.cep" required>
+      <br>
+      <button class="form-control" type="submit" ng-click="function_search(dado)">Pesquisar</button>
+      </div>
+  </form>
+  
+  <div class="form-group col-md-12" ng-if="data.response">
+    <div class="form-group col-md-6">
+      <label>CEP</label>
+      <input style="min-width:300px;" value="{{data.response.cep || 'NÃO INFORMADO'}}" class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Logradouro</label>
+      <input style="min-width:300px;" value="{{data.response.logradouro || 'NÃO INFORMADO'}}"  class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Complemento</label>
+      <input style="min-width:300px;" value="{{data.response.complemento || 'NÃO INFORMADO'}}" class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Bairro</label>
+      <input style="min-width:300px;" value="{{data.response.bairro || 'NÃO INFORMADO'}}"  class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Localidade</label>
+      <input style="min-width:300px;" value="{{data.response.localidade || 'NÃO INFORMADO'}}" class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>UF</label>
+      <input style="min-width:300px;" value="{{data.response.uf || 'NÃO INFORMADO'}}"  class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Unidade</label>
+      <input style="min-width:300px;" value="{{data.response.unidade || 'NÃO INFORMADO'}}"  class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>IBGE</label>
+      <input style="min-width:300px;" value="{{data.response.ibge || 'NÃO INFORMADO'}}"  class="form-control disabled" readonly="readonly">
+    </div>
+    <div class="form-group col-md-6">
+      <label>GIA</label>
+      <input style="min-width:300px;" value="{{data.response.gia || 'NÃO INFORMADO'}}"  class="form-control disabled" readonly="readonly">
+    </div>
+  </div>
+  
