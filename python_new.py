@@ -24,7 +24,7 @@ all_desc = []
 
 instance = "dev70252"
 user = "admin"
-pwd = "Sempere2509@"
+pwd = "######"
 headers = {"Content-Type":"application/json","Accept":"application/json"}
 
 url_cat = "https://{}.service-now.com/api/now/table/u_jobscrawler".format(instance)
@@ -112,11 +112,12 @@ for i in all_addr:
 for i in all_desc:
 	collect_desc = collect_desc + i
 
-for a,b,c,d in zip(collect_jobs, collect_link, collect_locl, collect_adds, collect_desc):
+for a,b,c,d,e in zip(collect_jobs, collect_link, collect_locl, collect_adds, collect_desc):
 	post_jobs(a, b, c, d, e)
 
 ###
 # PARA ENTENDER SOBRE A LINHA 13 LEIA: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 # E ME EXPLICA, PORQUE EU NÃO ENTENDO, SÓ SEI USAR
 ###
+
 
